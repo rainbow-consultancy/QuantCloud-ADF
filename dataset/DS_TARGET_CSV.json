@@ -1,0 +1,28 @@
+{
+	"name": "DS_TARGET_CSV",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_AZURE_BLOB_STORAGE",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "BLOB_CSV"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "car_price_dataset.csv",
+				"folderPath": "output",
+				"container": "adf-container"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
