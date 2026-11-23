@@ -1,0 +1,23 @@
+{
+	"name": "DS_BLOB_SOURCE_EXCEL",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_AZURE_BLOB_STORAGE",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "BLOB_EXCEL"
+		},
+		"annotations": [],
+		"type": "Excel",
+		"typeProperties": {
+			"sheetName": "MyWorkSheet",
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "adf-container"
+			},
+			"firstRowAsHeader": true
+		},
+		"schema": []
+	}
+}
