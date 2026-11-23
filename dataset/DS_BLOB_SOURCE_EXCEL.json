@@ -11,9 +11,9 @@
 		"annotations": [],
 		"type": "Excel",
 		"typeProperties": {
-			"sheetName": "MyWorkSheet",
 			"location": {
 				"type": "AzureBlobStorageLocation",
+				"fileName": "Customer.xlsx",
 				"container": "adf-container"
 			},
 			"firstRowAsHeader": true
