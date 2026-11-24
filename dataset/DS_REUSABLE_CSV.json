@@ -1,0 +1,25 @@
+{
+	"name": "DS_REUSABLE_CSV",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_AZURE_BLOB_STORAGE",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "BLOB_CSV"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "adf-container"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
