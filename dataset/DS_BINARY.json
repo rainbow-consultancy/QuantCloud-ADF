@@ -1,0 +1,33 @@
+{
+	"name": "DS_BINARY",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_AZURE_BLOB_STORAGE",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"FolderName": {
+				"type": "string"
+			},
+			"FileName": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "@dataset().FileName",
+					"type": "Expression"
+				},
+				"folderPath": {
+					"value": "@dataset().FolderName",
+					"type": "Expression"
+				},
+				"container": "adf-container"
+			}
+		}
+	}
+}
