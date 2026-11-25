@@ -7,6 +7,18 @@
 		},
 		"LS_AZURE_BLOB_STORAGE_connectionString": {
 			"value": ""
+		},
+		"LS_AZURE_SQL_DATABASE_password": {
+			"value": ""
+		},
+		"LS_AZURE_SQL_DATABASE_properties_typeProperties_server": {
+			"value": "qctserver.database.windows.net"
+		},
+		"LS_AZURE_SQL_DATABASE_properties_typeProperties_database": {
+			"value": "qct_retail"
+		},
+		"LS_AZURE_SQL_DATABASE_properties_typeProperties_userName": {
+			"value": "quant_cloud"
 		}
 	}
 }
