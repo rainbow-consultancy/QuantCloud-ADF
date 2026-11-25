@@ -1,0 +1,17 @@
+{
+	"name": "LS_AZURE_SQL_DATABASE",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"server": "qctserver.database.windows.net",
+			"database": "qct_retail",
+			"encrypt": "mandatory",
+			"trustServerCertificate": true,
+			"authenticationType": "SQL",
+			"userName": "quant_cloud",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDA0Q0IyOTBELTUzMUMtNEM1My1CMEM1LUUxOTFFNzNFQTE5Ml84MzUwZmE5YS05OTQ2LTQ1NGQtYTFiNC0xYzdkOWI4ZGM2NzkiDQp9"
+		}
+	}
+}
