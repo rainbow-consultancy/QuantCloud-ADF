@@ -19,6 +19,9 @@
 		},
 		"LS_AZURE_SQL_DATABASE_properties_typeProperties_userName": {
 			"value": "quant_cloud"
+		},
+		"ScheduleTrigger_properties_PL_PARAMETER_PASSING_parameters_P_FILE_NAME": {
+			"value": "products-10000.csv"
 		}
 	}
 }

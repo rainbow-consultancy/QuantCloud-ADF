@@ -26,6 +26,10 @@
 		"LS_AZURE_SQL_DATABASE_properties_typeProperties_userName": {
 			"type": "string",
 			"defaultValue": "quant_cloud"
+		},
+		"ScheduleTrigger_properties_PL_PARAMETER_PASSING_parameters_P_FILE_NAME": {
+			"type": "string",
+			"defaultValue": "products-10000.csv"
 		}
 	},
 	"variables": {
@@ -1307,6 +1311,46 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/DS_REUSABLE_CSV')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/ScheduleTrigger')]",
+			"type": "Microsoft.DataFactory/factories/triggers",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"runtimeState": "Started",
+				"pipelines": [
+					{
+						"pipelineReference": {
+							"referenceName": "PL_PARAMETER_PASSING",
+							"type": "PipelineReference"
+						},
+						"parameters": {
+							"P_FILE_NAME": "[parameters('ScheduleTrigger_properties_PL_PARAMETER_PASSING_parameters_P_FILE_NAME')]"
+						}
+					}
+				],
+				"type": "ScheduleTrigger",
+				"typeProperties": {
+					"recurrence": {
+						"frequency": "Day",
+						"interval": 1,
+						"startTime": "2026-11-26T12:48:00",
+						"timeZone": "India Standard Time",
+						"schedule": {
+							"minutes": [
+								25
+							],
+							"hours": [
+								18
+							]
+						}
+					}
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/pipelines/PL_PARAMETER_PASSING')]"
 			]
 		}
 	]
